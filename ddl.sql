@@ -19,9 +19,9 @@ CREATE TABLE `streams` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `all_streams` (
-  `event_id` int(11) DEFAULT '0',
-  `stream_id` int(11) DEFAULT '0',
-  `channel_id` int(11) DEFAULT '0',
+  `event_id` int(11),
+  `stream_id` int(11),
+  `channel_id` int(11),
   `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   KEY `fk_streams` (`stream_id`),
   KEY `fk_events` (`event_id`),

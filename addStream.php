@@ -25,7 +25,7 @@ if(isset($_POST['addStreamsEvents'])){
 
 	$id=$db->lastInsertId();
 
-	$statement_join = $db->prepare("INSERT INTO all_streams (event_id,stream_id,channel_id) VALUES (?,?, NULL)");
+	$statement_join = $db->prepare("INSERT INTO all_streams (event_id,stream_id) VALUES (?,?)");
 	$statement_join->bindParam(1,$event);
 	$statement_join->bindParam(2,$id);
 	$statement_join->execute();
@@ -39,7 +39,7 @@ if(isset($_POST['addStreamsChannels'])){
 
 	$id=$db->lastInsertId();
 
-	$statement_join = $db->prepare("INSERT INTO all_streams (channel_id, stream_id, event_id) VALUES (?,?,NULL)");
+	$statement_join = $db->prepare("INSERT INTO all_streams (channel_id, stream_id) VALUES (?,?)");
 	$statement_join->bindParam(1,$event);
 	$statement_join->bindParam(2,$id);
 	$statement_join->execute();
