@@ -6,7 +6,7 @@
 	<input type="text" name="stream"/>
 
 	<label for="event">Event or Channel ID</label>
-	<input type="text" name="event"/>
+	<input type="number" name="event" value="1"/>
 
 	<input type="submit" value="Submit"/>
 </form>
